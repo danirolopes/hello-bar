@@ -58,6 +58,9 @@ class App {
     } else {
       this.marginProp = "marginTop";
     }
+    if(!this.settings.animation){
+      this.bar.classList.add("hello-bar--is-visible");
+    }
     this.events = {};
     window.addEventListener("resize", debounce(() => {
       if (!document.querySelector(`#${this.id}`)) return;
